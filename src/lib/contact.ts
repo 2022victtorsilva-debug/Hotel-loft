@@ -5,12 +5,15 @@ const sanitizeNumber = (value: string) => value.replace(/\D/g, "");
 export const hasWhatsapp = () =>
   Boolean(sanitizeNumber(siteConfig.contact.whatsappNumber));
 
-export const getWhatsAppUrl = (message: string) => {
-  const number = sanitizeNumber(siteConfig.contact.whatsappNumber);
-  if (!number) return null;
+export const buildWhatsAppUrl = (number: string, message: string) => {
+  const sanitizedNumber = sanitizeNumber(number);
+  if (!sanitizedNumber) return null;
 
-  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${sanitizedNumber}?text=${encodeURIComponent(message)}`;
 };
+
+export const getWhatsAppUrl = (message: string) =>
+  buildWhatsAppUrl(siteConfig.contact.whatsappNumber, message);
 
 export const generalWhatsAppMessage =
   "Olá! Vim pelo site da Barreiras LOFT e gostaria de mais informações.";

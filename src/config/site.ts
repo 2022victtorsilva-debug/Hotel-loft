@@ -34,35 +34,35 @@ export const siteConfig = {
   },
   media: {
     hero:
-      "https://images.unsplash.com/photo-1784653548504-c0928cd4737e?auto=format&fit=crop&w=2200&q=84",
+      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=2200&q=84",
     about:
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1400&q=82",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=82",
     finalCta:
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=2200&q=82",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=2200&q=82",
     gallery: [
       {
         src: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=82",
         alt: "Quarto contemporâneo em tons neutros com iluminação acolhedora",
       },
       {
-        src: "https://images.unsplash.com/photo-1777016844282-46fa8713cdae?auto=format&fit=crop&w=1400&q=82",
+        src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=82",
         alt: "Acomodação moderna com cama ampla e área de apoio",
       },
       {
-        src: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=82",
+        src: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1400&q=82",
         alt: "Detalhe de quarto de hospedagem contemporâneo",
       },
       {
-        src: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=82",
+        src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=82",
         alt: "Ambiente de hospedagem organizado e confortável",
       },
       {
-        src: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1400&q=82",
+        src: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=82",
         alt: "Detalhes internos com madeira e tons claros",
       },
       {
-        src: "https://images.unsplash.com/photo-1782805152914-d2b6b2623a72?auto=format&fit=crop&w=1400&q=82",
-        alt: "Banheiro contemporâneo em paleta neutra",
+        src: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=82",
+        alt: "Ambiente interno contemporâneo em paleta neutra",
       },
     ],
   },
@@ -78,7 +78,7 @@ export const siteConfig = {
       bathroom: "Banheiro privativo",
       amenities: ["Wi-Fi", "Ar-condicionado"],
       image:
-        "https://images.unsplash.com/photo-1784653548504-c0928cd4737e?auto=format&fit=crop&w=1200&q=82",
+        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=82",
     },
     {
       id: "conforto",
@@ -91,7 +91,7 @@ export const siteConfig = {
       bathroom: "Banheiro privativo",
       amenities: ["Wi-Fi", "Ar-condicionado", "TV"],
       image:
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=82",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=82",
     },
     {
       id: "premium",
@@ -104,7 +104,7 @@ export const siteConfig = {
       bathroom: "Banheiro privativo",
       amenities: ["Wi-Fi", "Ar-condicionado", "TV"],
       image:
-        "https://images.unsplash.com/photo-1777016844282-46fa8713cdae?auto=format&fit=crop&w=1200&q=82",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=82",
     },
   ] satisfies Room[],
   amenities: [

@@ -1,7 +1,11 @@
 import { describe, expect, it } from "vitest";
 
 import { formatDate, getLocalDateInputValue, validateBooking } from "@/lib/booking";
-import { bookingWhatsAppMessage } from "@/lib/contact";
+import {
+  bookingWhatsAppMessage,
+  buildWhatsAppUrl,
+  getWhatsAppUrl,
+} from "@/lib/contact";
 
 describe("booking helpers", () => {
   it("formats ISO dates for WhatsApp", () => {
@@ -51,5 +55,16 @@ describe("booking helpers", () => {
     expect(message).toContain("Loft Premium");
     expect(message).toContain("Check-in: 10/09/2026");
     expect(message).toContain("Hóspedes: 2");
+  });
+
+  it("does not create a WhatsApp URL while the official number is absent", () => {
+    expect(getWhatsAppUrl("Olá")).toBeNull();
+  });
+
+  it("sanitizes the number and encodes WhatsApp messages", () => {
+    expect(buildWhatsAppUrl("+55 (77) 99999-9999", "Olá! Loft Premium & datas"))
+      .toBe(
+        "https://wa.me/5577999999999?text=Ol%C3%A1!%20Loft%20Premium%20%26%20datas",
+      );
   });
 });

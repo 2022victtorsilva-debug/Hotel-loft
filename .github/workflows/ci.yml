@@ -30,6 +30,9 @@ jobs:
       - name: Tests
         run: npm test
 
+      - name: Verify illustrative images
+        run: npm run check:images
+
       - name: Production build
         run: npm run build
 

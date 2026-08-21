@@ -22,15 +22,16 @@ npm install
 npm run dev
 ```
 
-## Build de produção
+## Validação e build de produção
 
 ```bash
 npm run typecheck
 npm test
+npm run check:images
 npm run build
 ```
 
-O build estático é gerado em `dist/`.
+O workflow em `.github/workflows/ci.yml` executa a mesma validação no GitHub Actions. O build estático é gerado em `dist/`.
 
 ## Estrutura principal
 
@@ -42,6 +43,8 @@ src/
   lib/          WhatsApp e validação da consulta
   App.tsx       composição da página
   styles.css    tema visual e estilos globais
+scripts/
+  check-image-urls.mjs  verifica as imagens ilustrativas usadas no protótipo
 ```
 
 ## Onde alterar os dados do hotel
@@ -60,7 +63,7 @@ Use o número completo com DDI + DDD + número, apenas dígitos. Enquanto estive
 
 ### Instagram
 
-Altere `siteConfig.contact.instagramUrl`. Enquanto estiver vazio, o botão aparece como “a configurar” e não aponta para um perfil inexistente.
+Altere `siteConfig.contact.instagramUrl`. Enquanto estiver vazio, os pontos de Instagram aparecem como “a configurar” e não apontam para um perfil inexistente.
 
 ### Endereço e mapa
 
@@ -95,7 +98,7 @@ As URLs ilustrativas ficam em:
 - `siteConfig.media.gallery`
 - campo `image` de cada acomodação
 
-As imagens podem ser trocadas por fotografias oficiais sem alterar os componentes.
+As imagens podem ser trocadas por fotografias oficiais sem alterar os componentes. O CI verifica se todas as URLs ilustrativas respondem como imagem antes de aprovar o build.
 
 ## Contato pelo WhatsApp
 

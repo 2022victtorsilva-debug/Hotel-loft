@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Maximize2, X } from "lucide-react";
+import { Instagram, Maximize2, X } from "lucide-react";
 
+import { ContactAction } from "@/components/ContactAction";
 import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/config/site";
 
@@ -44,10 +45,18 @@ export const Gallery = () => {
                 Conheça nossos <span className="italic text-brand">espaços.</span>
               </h2>
             </div>
-            <p className="max-w-lg text-sm leading-7 text-muted lg:justify-self-end">
-              Uma seleção visual ilustrativa da atmosfera que inspira a experiência
-              Barreiras LOFT — ambientes limpos, atuais e acolhedores.
-            </p>
+            <div className="flex max-w-lg flex-col items-start gap-5 lg:justify-self-end">
+              <p className="text-sm leading-7 text-muted">
+                Uma seleção visual ilustrativa da atmosfera que inspira a experiência
+                Barreiras LOFT — ambientes limpos, atuais e acolhedores.
+              </p>
+              <ContactAction
+                icon={Instagram}
+                label="Ver no Instagram"
+                href={siteConfig.contact.instagramUrl}
+                external
+              />
+            </div>
           </div>
         </Reveal>
 
